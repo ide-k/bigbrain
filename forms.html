@@ -1,0 +1,113 @@
+<p>ctrl+u for src<br>
+
+    making things interactive<br>
+
+    inputs are important, some include:<br>
+    <ul>
+        <li>signup and logins for websites</li>
+        <li>personal info</li>
+        <li>filtering content (dropdowns, checkboxes)</li>
+        <li>searching</li>
+        <li>uploading files</li>
+    </ul>
+
+    to accomodate these needs, html providese interactive form controls:<br>
+    <ul>
+        <li>text inputs (one or multiple lines)</li>
+        <li>radio buttons</li>
+        <li>checkboxes</li>
+        <li>dropdowns</li>
+        <li>upload widgets</li>
+        <li>submit buttons</li>
+    </ul>
+
+    these controls use different tags, but most of them use the &lt;input&gt; tag.<br>
+    &lt;input&gt; is a self-closing element. the type of input is defined by its <strong>type</strong> attribute<br>
+    <br>
+    for example:<br>
+    <!-- A text input -->
+    <input type="text">
+    <!-- A checkbox -->
+    <input type="checkbox">
+    <!-- A radio button -->
+    <input type="radio">
+    <br>
+    Form Element:<br>
+    block level element that defines an interactive part of a page.<br>
+    all form controls(like &lt;input&gt;, &lt;textarea&gt;, or &lt;button&gt;) must appear within a &lt;form&gt; element.<br>
+
+    Two html attributes are <strong>required</strong>:
+    <ul>
+        <li><strong>action</strong> contains an address that defines <em>where</em> the form info will be sent.</li>
+        <li><strong>method</strong> can be either GET or POST and defines <em>how</em> the form info will be sent</li>
+    </ul>
+
+    form info is sent to a server.<br>
+    think of a form as a collection of input controls that work together to perform a single operation.<br>
+    if you wrote a login form, you would have 3 controls:<br>
+    <ul>
+        <li>an email input (&lt;input type="email"&gt;</li>
+        <li>a password input (&lt;input type="password"&gt;</li>
+        <li>a submit button (&lt;input type="submit"&gt;</li>
+    </ul>
+    These 3 elements would be enclosed within a single form<br>
+    <br>
+
+    Text Inputs:<br>
+    p much all forms require text input from the user in order for them to enter info,<br>
+    Text form controls come in different variations:<br>
+
+    <ul>
+        <li>text (input type="text") --> allows any type of character</li>
+        <li>email (input type="email") --> might display warning if an invalid email is entered</li>
+        <li>password (input type="password) --> shows dots as characters</li>
+        <li>number (input type=number") up/down keboard keys can be used</li>
+        <li>telephone (input type="tel") can trigger an autofill</li>
+        <li>multiple line text(&lt;textarea&gt; &lt;/textare&gt;) can be resized</li>
+    </ul>
+    <br>
+    Placeholderss:<br>
+    text inputs can display a placeholder text that disappears as soon as text is entered:<br>
+    &lt;input type="text" placeholder="Enter your name"&gt;<br>
+    <br>
+    Labels:<br>
+    because form elements aren't descriptive, they are usually preceded by a <strong>label</strong>:<br>
+    &lt;label&gt; &lt;/label&gt;<br>
+    While placeholders already provide some hint at what content is expected, labels have the advantage<br>
+    of remaining visible at all times, and can be used alongside other types of form controls, like checkboxes<br>
+    or radio buttons.<br>
+    <br>
+    you could theoretically use &lt;p&gt; to describe form elements, but using &lt;label&gt; is semantically more<br>
+    valid because they only exist <strong>within</strong> forms.<br>
+
+    you can make a label for an input attribute (for=input id)<br>
+    <br>
+    
+    Checkboxes:<br>
+    only 2 states, checked or unchecked.<br>
+    yes or no stuff<br>
+    (input type=<quotes>checkbox</quotes>)<br>
+    wrap it in a label tag because its hard to click on the box sometimes<br>
+    you can make it checked by default by adding the <strong>checked</strong> attribute<br>
+    <br>
+
+    Radio Buttons:<br>
+    presenting the user with a list of options to choose from<br>
+    For this form control to work, your code needs to <strong>group</strong> a list of buttons together<br>
+    aka use the same value for the <strong>name</strong> attribute<br>
+    (input type=<quotes>radio</quotes> name=<quotes>(group name)</quotes>)<br>
+    radio buttons are said to be <strong>mutually exclusive</strong>.<br>
+    <br>
+    The difference between radio buttons and checkboxes:<br>
+    checkboxese exist on their own, radio buttons can only appear as a list (@ least 2 options)<br>
+    also, clicking a checkbox is <strong>optional</strong>. This is why it's impossible to uncheck a radio button unless choosing a sibling option.<br>
+    choosing a radio button is <strong>mandatory</strong><br>
+    <br>
+    
+    Dropdown Menus:<br>
+    If the number of options to choose from takes up too much space on the page, use the &lt;select&gt; tag for dropdown menus.<br>
+    &lt;option&gt; should be the child tag of &lt;select&gt;<br>
+    Multiple choice dropdowns:<br>
+    add the <strong>multiple</strong> attribute to &lt;select&gt; (hold down ctrl and click for multiple choices)<br>
+    good alternative for multi checkboxes
+</p>    
