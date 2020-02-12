@@ -12,9 +12,9 @@ class Box {
         // member function declaration
         double getVolume(void);
         double getArea(void);
-        void setLength(void);
-        void setWidth(void);
-        void setHeight(void);
+        void setLength(double len);
+        void setWidth(double wid);
+        void setHeight(double hei);
 
 }; // need a semicolon at the end of classes apparently
 
@@ -28,7 +28,17 @@ double box::getArea(void) {
     return length * width;
 }
 
-// init the set functions
+void box::setLength(double len) {
+    length = len;
+}
+
+void box::setWidth(double wid) {
+    width = wid;
+}
+
+void box::setHeight(double hei) {
+    height = hei;
+}
 
 int main() {
 
@@ -38,14 +48,14 @@ int main() {
     double volume;
 
     // box1 specs
-    box1.height = 3.0;
-    box1.length = 7.2;
-    box1.width = 4.5;
+    box1.setHeight(3.0);
+    box1.setLength(7.2);
+    box1.setWidth(4.5);
 
     // box2 specs
-    box2.height = 30.0;
-    box2.length = 72.2;
-    box2.width = 45.5;
+    box2.setHeight(30.0);
+    box2.setLength(72.2);
+    box2.setWidth(45.5);
 
     // volume of box1
     volume = box1.length * box1.width * box1.height;
