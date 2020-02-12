@@ -23,6 +23,7 @@ double box::getVolume(void) {
     return length * width * height;
 }
 
+// you can also make methods outside the class using the scope resolution operator (::)
 double box::getArea(void) {
     return length * width;
 }
