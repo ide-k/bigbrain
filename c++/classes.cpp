@@ -8,7 +8,26 @@ class Box {
         double length;
         double width;
         double height;
+
+        // member function declaration
+        double getVolume(void);
+        double getArea(void);
+        void setLength(void);
+        void setWidth(void);
+        void setHeight(void);
+
 }; // need a semicolon at the end of classes apparently
+
+// member function init
+double box::getVolume(void) {
+    return length * width * height;
+}
+
+double box::getArea(void) {
+    return length * width;
+}
+
+// init the set functions
 
 int main() {
 
@@ -34,6 +53,17 @@ int main() {
     // Volume of box2
     volume = box2.length * box2.width * box2.height;
     cout<<"Volume of box2: "<<volume<<endl;
+
+
+    // oop stuff
+    double oopVolume;
+    double oopArea;
+    
+    oopVolume = box1.getVolume();
+    cout << "oopVolume is: " << oopVolume << endl;
+
+    oopArea = box2.getArea();
+    cout << "oopArea is: " << oopArea << endl;
 
     return 0;
 }
